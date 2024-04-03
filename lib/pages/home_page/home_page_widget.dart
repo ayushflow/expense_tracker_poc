@@ -45,7 +45,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
           backgroundColor: FlutterFlowTheme.of(context).primary,
           automaticallyImplyLeading: false,
           title: Text(
-            'Home Page',
+            'Home Screen Here',
             style: FlutterFlowTheme.of(context).headlineMedium.override(
                   fontFamily: 'Outfit',
                   color: Colors.white,
@@ -70,7 +70,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                   onPressed: () async {
                     context.pushNamed('AddExpenseScreen');
                   },
-                  text: 'Add Expense',
+                  text: 'Add expense',
                   options: FFButtonOptions(
                     height: 40.0,
                     padding:
