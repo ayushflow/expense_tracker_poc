@@ -45,7 +45,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
           backgroundColor: FlutterFlowTheme.of(context).primary,
           automaticallyImplyLeading: false,
           title: Text(
-            'Page Title',
+            'Home Screen',
             style: FlutterFlowTheme.of(context).headlineMedium.override(
                   fontFamily: 'Outfit',
                   color: Colors.white,
@@ -53,14 +53,54 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                 ),
           ),
           actions: [],
-          centerTitle: false,
+          centerTitle: true,
           elevation: 2.0,
         ),
         body: SafeArea(
           top: true,
           child: Column(
             mainAxisSize: MainAxisSize.max,
-            children: [],
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Align(
+                alignment: AlignmentDirectional(0.0, -1.0),
+                child: FFButtonWidget(
+                  onPressed: () async {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(
+                        content: Text(
+                          'Tracking expense is going to be esay ',
+                          style: TextStyle(
+                            color: FlutterFlowTheme.of(context).primaryText,
+                          ),
+                        ),
+                        duration: Duration(milliseconds: 4000),
+                        backgroundColor: FlutterFlowTheme.of(context).secondary,
+                      ),
+                    );
+                  },
+                  text: 'Add Expense',
+                  options: FFButtonOptions(
+                    height: 40.0,
+                    padding:
+                        EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                    iconPadding:
+                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                    color: FlutterFlowTheme.of(context).primary,
+                    textStyle: FlutterFlowTheme.of(context).titleSmall.override(
+                          fontFamily: 'Readex Pro',
+                          color: Colors.white,
+                        ),
+                    elevation: 3.0,
+                    borderSide: BorderSide(
+                      color: Colors.transparent,
+                      width: 1.0,
+                    ),
+                    borderRadius: BorderRadius.circular(8.0),
+                  ),
+                ),
+              ),
+            ],
           ),
         ),
       ),
