@@ -70,7 +70,6 @@ class _AddExpenseScreenWidgetState extends State<AddExpenseScreenWidget> {
             decoration: BoxDecoration(),
             child: Column(
               mainAxisSize: MainAxisSize.max,
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
